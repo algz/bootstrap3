@@ -52,7 +52,7 @@
 								<span class='glyphicon glyphicon-user'></span>
 								</span>
                             <input type="text" id="username" name="username"
-                                   class="form-control" placeholder="用户名">
+                                   class="form-control" placeholder="用户名" value="<%=(typeof(user)!=='undefined'&&user?user.username:'')%>">
                         </div>
                     </div>
                 </div>
@@ -69,9 +69,13 @@
                         </div>
                     </div>
                 </div>
+                <% if(typeof(error)!=='undefined'&&error){%>
                 <div class='row'>
-                    <div class="alert alert-warning"></div>
+                    <div class="alert alert-warning">
+                        <%=error%>
+                    </div>
                 </div>
+                <%}%>
                 <!-- .btn-primary创建一个带有样式的按钮 -->
                 <!-- .btn-lg、.btn-sm、.btn-xs可以获得不同尺寸的按钮 -->
                 <!-- .btn-block可以使按钮充满父节点100%的宽度，而且也变为了块级（block）元素 -->

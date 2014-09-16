@@ -1,6 +1,7 @@
 exports.authorize=function(req,res,next){
     if(!req.session.user){
-        return false
+        res.redirect('reg');
+        return;
     }
     return next();
 }

@@ -52,6 +52,7 @@ app.use(session({
 app.locals.title='bootrap3';//定义标题
 //使用中间件功能(中间件按顺序匹配请求路径,即参数1(参数1为可选,默认为"/"),完成视图动态助手(变量/方法等)赋值
 app.use(function(req, res, next) {
+    title:'algz',
     res.locals.user=req.session.user;//定义用户信息
 //    // 定义动态视图助手变量
 //    response.locals.dynamicVar = "dynamic var";

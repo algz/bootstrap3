@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var common=require('../common/common')
 
 
 /* GET home page. */
@@ -7,9 +8,12 @@ router.get('/', function (req, res) {
     res.render('index');
 });
 
-
+/* 发表话题 */
 router.post("/publish",function(req,res){
     console.log('publish');
+});
+router.get("/publish",common.authorize,function(req,res){
+    res.render("publish");
 });
 
 /* GET 详细页面. */
@@ -17,9 +21,7 @@ router.get('/thread', function(req, res) {
     res.render('thread', { title: 'Express' });
 });
 
-router.get("/publish",function(req,res){
-    res.render("publish",{title:'Express'});
-});
+
 
 
 

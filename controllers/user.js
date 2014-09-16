@@ -36,26 +36,34 @@ exports.logout=function(req,res){
  * @param res
  */
 exports.reg=function(req,res){
-    console.log(req.param("username"));
-    console.log(req.query.id);
-    //res.redirect('/');
+    var user = new UserModel({
+        username: req.param('username'),
+        password: req.param('password')
+    });
+    res.locals.user=user;
 
-    UserModel.findOne({username:req.param('username')},function(err,user){
+    if(!req.param("username")){
+        res.render('reg',{error:'请输入用户名'});
+        return;
+    }else if(!req.param("password")){
+        res.render('reg',{error:'请输入密码'});
+        return;
+    }
+
+    UserModel.findOne({username:req.param('username')},function(err,u){
         if(err){
             console.log(err.message);
             return;
         }
-        if(user){
-            res.render('reg',{err:'用户名已存在'});
+        if(u){
+            res.render('reg',{error:'用户名已存在'});
             return;
         }
-        user = new UserModel({
-            userName: req.param('username'),
-            passWord: req.param('password')
-        });
         user.save(function (err,user) {
             if (err) {
-                callback(err);
+                console.log(err.message);
+                res.render('reg',{user:user,error:err.message});
+                return;
             }
             req.session.user=user;
             res.redirect( '/');
