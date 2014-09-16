@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.css">
+
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        #panel-login {
+            max-width: 350px;
+        }
+        #panel-login .controls{
+            padding: 0px 15px 15px !important;
+        }
+
+        #panel-login .alert-block{
+            padding: 0px;
+        }
+        #panel-login .alert-block ul{
+            margin: 10px 15px;
+            padding-left: 0px;
+        }
+        #panel-login .alert-block ul li{
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+<!-- .container 包裹页面上的内容实现居中对齐;不能嵌套. -->
+<div class="container">
+    <!-- 自定义全局附加样式 -->
+    <form class="bs-algz bs-algz-form" method="POST" >
+        <!-- .panel所做的只是提供基本的边界和内部，来包含内容. -->
+        <div class="panel panel-default panel-single" id='panel-login'>
+            <!-- .panel-heading可以简单地加入一个标题容器。您也可以用<h1>-<h6>和.panel-title类加入预定义样式的标题。 -->
+            <div class="panel-heading">
+                <h3 class="panel-title">注册</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- .input-group-lg给.input-group添加标明尺寸的class -->
+                        <div class="input-group input-group-lg">
+                            <!-- .input-group-addon 可以给.form-control前面或后面追加元素-->
+								<span class="input-group-addon">
+								<!-- 图标 class 不能和其它元素联合使用，因为这些图标被设计为独立的元素、独立使用。 -->
+								<span class='glyphicon glyphicon-user'></span>
+								</span>
+                            <input type="text" id="username" name="username"
+                                   class="form-control" placeholder="用户名">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- .input-group-lg给.input-group添加标明尺寸的class -->
+                        <div class="input-group input-group-lg">
+                            <!-- .input-group-addon 可以给.form-control前面或后面追加元素-->
+								<span class="input-group-addon">
+								<span class='glyphicon glyphicon-lock'></span>
+								</span>
+                            <input type="password" id="password" name="password"
+                                   class="form-control" placeholder="密码">
+                        </div>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class="alert alert-warning"></div>
+                </div>
+                <!-- .btn-primary创建一个带有样式的按钮 -->
+                <!-- .btn-lg、.btn-sm、.btn-xs可以获得不同尺寸的按钮 -->
+                <!-- .btn-block可以使按钮充满父节点100%的宽度，而且也变为了块级（block）元素 -->
+                <button type="submit" class="btn btn-lg btn-primary  btn-block">注册</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+</body>
+</html>

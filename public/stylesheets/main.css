@@ -1,0 +1,23 @@
+/*********************************  login.ejs ******************************/
+/* Forms */
+.bs-example-control-sizing select,
+.bs-example-control-sizing input[type="text"] + input[type="text"] {
+  margin-top: 10px;
+}
+.bs-algz-form .input-group {
+  margin-bottom: 10px;
+}
+.bs-algz > textarea.form-control {
+  resize: vertical;
+}
+
+/* panel single **/
+.panel-single {
+  margin: 50px auto 20px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 0 40px rgba(0,0,0,.3);
+     -moz-box-shadow: 0 0 40px rgba(0,0,0,.3);
+          box-shadow: 0 0 40px rgba(0,0,0,.3);
+}

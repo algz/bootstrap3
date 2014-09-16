@@ -1,0 +1,10 @@
+var mongoose=require('mongoose');
+var Schema=mongoose.Schema;
+
+var MessageSchema=new Schema({
+    title:String,
+    content:String,
+    create_date:{type:Date,Default:Date.now},
+    topic_id:Schema.Types.ObjectId,
+    author_id:Schema.Types.ObjectId
+});

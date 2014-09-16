@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <title>Bootstrap 论坛</title>
+    <meta name="keywords" content="Bootstrap" />
+    <meta name="description" content="载" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- basic styles -->
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入）
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+ -->
+
+    <!-- dataTables
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+    <script src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<header class="navbar navbar-default  " role="brand">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Bootstrap_brand</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">首页</a>
+                </li>
+                <li>
+                    <a href="#">版块</a>
+                </li>
+                <li>
+                    <a href="#">热门活动</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">立即注册</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<div class="container">
+   <div class="row">
+
+       <div class="col-xs-9">
+           <ol class="breadcrumb">
+               <li><a href="#" class="glyphicon glyphicon-home"></a></li>
+               <li><a href="#">机型专区</a></li>
+               <li class="active">小米平板</li>
+           </ol>
+
+           <div class="panel panel-default">
+               <div class="panel-heading">
+                   <div class="btn-group">
+                       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                           全部公告
+                       </button>
+                   </div>
+                   <!-- Single button -->
+                   <div class="btn-group">
+                       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                           子类
+                       </button>
+                   </div></div>
+               <div class="panel-body">
+                  <div>筛选:
+                      <div class="btn-group">
+                          <button type="button" class="btn btn-default btn-xs">全部主题</button>
+                          <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                              <span class="caret"></span>
+                              <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                              <li class="active"><a href="#">全部主题</a></li>
+                              <li><a href="#">投票</a></li>
+                          </ul>
+                      </div>
+                      <div class="btn-group">
+                          <button type="button" class="btn btn-default btn-xs">全部时间</button>
+                          <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                              <span class="caret"></span>
+                              <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                              <li class="active"><a href="#">全部时间</a></li>
+                              <li><a href="#">一天</a></li>
+                              <li><a href="#">二天</a></li>
+                              <li><a href="#">一周</a></li>
+                          </ul>
+                      </div> 排序:
+                      <div class="btn-group">
+                          <button type="button" class="btn btn-default btn-xs">回复时间</button>
+                          <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                              <span class="caret"></span>
+                              <span class="sr-only">Toggle Dropdown</span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                              <li class="active"><a href="#">回复时间</a></li>
+                              <li><a href="#">发帖时间</a></li>
+                              <li><a href="#">回复数量</a></li>
+                              <li><a href="#">查看数量</a></li>
+                          </ul>
+                      </div>
+                      <div class="btn-group pull-right">
+                          <a href="#">热门</a> | <a  href="#">精华</a>
+                      </div>
+                  </div>
+                   <p></p>
+                   <!-- Table -->
+                   <table class="table">
+                       <tbody>
+                       <tr>
+                           <td width="50">
+                               <a href="#">
+                                   <img data-src="holder.js/50x40" alt="...">
+                               </a>
+                           </td>
+                           <td>
+                               <div ><a class="btn btn-primary btn-xs" href="#" role="button">置顶</a>
+                                   <a class="btn btn-default btn-xs" href="#" role="button">小米手机4</a>
+                                   <a style="font-size: 16px;" href="#">MIUI6正式发布，分享你最喜欢的功能 得小米手机4 F码</a>
+                                   <span class="badge">1</span>
+                               </div>
+                               <div style="color: #c7c7c7;font-size: 12px;">发帖人 | 浏览：97284 | 回复：76319 | 回帖人 1 秒前</div>
+
+
+                           </td>
+                       </tr>
+                       </tbody>
+                   </table>
+
+                   <ul class="pager">
+                       <li class="disabled"><a href="#">前一页</a></li>
+                       <li class="active"><a href="#">1</a></li>
+                       <li><a href="#">2</a></li>
+                       <li><a href="#">...</a></li>
+                       <li><a href="#">下一页</a></li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+       <div class="col-xs-3">
+           <div class="panel">
+                   <button type="button" class="btn btn-primary btn-lg btn-block">发表新帖</button>
+           </div>
+
+           <div class="panel panel-default">
+               <div class="panel-heading">热门版块</div>
+               <div class="panel-body">
+                   Panel content
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+
+<script src="http://cdn.bootcss.com/holder/2.3.1/holder.min.js"></script>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+<script src="/javascripts/jquery.hotkeys.js"></script>
+<script src="bootstrap-wysiwyg.js"></script>
+</body>
+</html>
+

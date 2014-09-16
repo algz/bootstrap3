@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <title><%=title%></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- basic styles -->
+
+
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+    <!-- include summernote.css -->
+    <link rel="stylesheet" href="/summernote-master/dist/summernote.css">
+
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入）
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+ -->
+
+    <!-- dataTables
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+    <script src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        #editor {overflow:scroll; max-height:300px}
+    </style>
+
+</head>
+
+<body>
+<!-- 导航栏 -->
+<% include decorate/navbar.ejs %>
+
+<div class="container">
+
+    <div class="panel panel-default">
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-2">
+                    <img data-src="holder.js/150x125" alt="..." />
+                </div>
+                <div class="col-xs-10">
+
+                    <form method="post">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">子类 <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">子类1</a></li>
+                                    <li><a href="#">子类2</a></li>
+                                    <li><a href="#">子类3</a></li>
+                                </ul>
+                            </div><!-- /btn-group -->
+                            <input type="text" class="form-control">
+                        </div>
+                        <p></p>
+                        <textarea class="summernote"><p>Seasons <b>coming up</b></p></textarea>
+                        <button type="submit" class="btn btn-default">submit</button>
+                    </form>
+
+                    <!-- PAGE CONTENT ENDS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<!-- include jquery -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<!-- include libraries BS3 -->
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+<!-- summernote.js -->
+<script type="text/javascript" src="/summernote-master/dist/summernote.js"></script>
+<!-- 图像缩略图.JS -->
+<script src="http://cdn.bootcss.com/holder/2.3.1/holder.min.js"></script>
+
+<script>
+    $(function(){
+        $('.summernote').summernote({
+            height: 200
+        });
+    });
+</script>
+</body>
+</html>
+
