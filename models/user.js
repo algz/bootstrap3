@@ -5,8 +5,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
-    username:String,
-    password:String
+    loginname:String,//登陆名
+    aliasname:String,//昵称
+    password:String//密码
 });
 
 //创建索引，键后面的数字为索引方向，1表示升序，-1表示降序

@@ -8,17 +8,26 @@ var express = require('express');
  * @param res
  */
 exports.login=function(req,res){
-    UserModel.findOne({userName:req.param("username")},function(err,user){
+    var user = new UserModel({
+        username: req.param('username'),
+        password: req.param('password')
+    });
+    res.locals.user=user;
+    UserModel.findOne({
+        username: req.param('username')
+    },function(err,u){
         if(err){
             console.log(err.message);
             return;
         };
-        if(!user){
+        if(!u){
             //return res.redirect('login',{err:'用户不存在'}); // X
-            return res.render('login',{err:'用户不存在'});//只能重定向用:req.headers.referer
+            return res.render('login',{error:'用户不存在'});//只能重定向用:req.headers.referer
             //return res.render(req.headers.referer||'/',{err:'用户不存在!'}) // X
+        }else if(u.password!==user.password){
+            return res.render('login',{error:'密码不正确'});//只能重定向用:req.headers.referer
         }
-        req.session.user=user;
+        req.session.user=u;
         res.redirect('/');
         //res.render("index");
     });

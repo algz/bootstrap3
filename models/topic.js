@@ -7,10 +7,10 @@ var Schema=mongoose.Schema;
  * @type {Schema}
  */
 var topicSchema=new Schema({
-    title:String, //标题
-    content:String,//内容
-    author_id:Schema.Types.ObjectId, //作者\
+    caption:String, //标题
+    main_body:String,//正文
+    author_id:Schema.Types.ObjectId, //作者id
     create_date:{type:Date,default:Date.now},
-    isTop:Boolean//是否置顶
+    is_top:{type:Boolean,default:false}//是否置顶
 });
 exports.TopicModel=mongoose.model("Topic",topicSchema);

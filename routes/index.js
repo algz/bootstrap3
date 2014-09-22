@@ -8,10 +8,9 @@ router.get('/', function (req, res) {
     res.render('index');
 });
 
-/* 发表话题 */
-router.post("/publish",function(req,res){
-    console.log('publish');
-});
+/**************** 发表话题 *******************/
+var topicAction=require('../controllers/topic')
+router.post("/publish",topicAction.publish);
 router.get("/publish",common.authorize,function(req,res){
     res.render("publish");
 });
